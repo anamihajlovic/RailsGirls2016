@@ -1,0 +1,20 @@
+
+<table class = "table table-bordered">
+  <tbody>
+    <tr>
+		<th>Name:</th>
+		<td><%= @idea.name %></td>
+	</tr>
+	<tr>
+		<th>Description:</th>
+		<td><%= @idea.description %></td>
+	</tr>
+	<tr>
+		<th>Picture:</th>
+		<td><%= image_tag(@idea.picture_url, width: 250) if @idea.picture.present? %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
